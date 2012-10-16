@@ -32,8 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="RestSharp">
-      <HintPath>..\homeos\Drivers\DriverFitbitUltra\RestSharp.dll</HintPath>
+    <Reference Include="Fitbit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Fitbit.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=104.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,35 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Fitbit\Authenticator.cs" />
-    <Compile Include="Fitbit\FitbitClient.cs" />
-    <Compile Include="Fitbit\FitbitException.cs" />
-    <Compile Include="Fitbit\Helpers\StringEnum.cs" />
-    <Compile Include="Fitbit\Models\Activity.cs" />
-    <Compile Include="Fitbit\Models\ActivityDistance.cs" />
-    <Compile Include="Fitbit\Models\ActivityGoals.cs" />
-    <Compile Include="Fitbit\Models\ActivityLog.cs" />
-    <Compile Include="Fitbit\Models\ActivitySummary.cs" />
-    <Compile Include="Fitbit\Models\ApiSubscription.cs" />
-    <Compile Include="Fitbit\Models\AuthCredential.cs" />
-    <Compile Include="Fitbit\Models\Device.cs" />
-    <Compile Include="Fitbit\Models\Enums\APICollectionType.cs" />
-    <Compile Include="Fitbit\Models\Enums\DeviceType.cs" />
-    <Compile Include="Fitbit\Models\Enums\IntradayResourceType.cs" />
-    <Compile Include="Fitbit\Models\Enums\ResourceOwnerType.cs" />
-    <Compile Include="Fitbit\Models\Enums\TimeSeriesResourceType.cs" />
-    <Compile Include="Fitbit\Models\Friend.cs" />
-    <Compile Include="Fitbit\Models\IntradayData.cs" />
-    <Compile Include="Fitbit\Models\SubscriptionResponse.cs" />
-    <Compile Include="Fitbit\Models\TimeSeriesDataList.cs" />
-    <Compile Include="Fitbit\Models\TimeSeriesDataListInt.cs" />
-    <Compile Include="Fitbit\Models\UpdatedResource.cs" />
-    <Compile Include="Fitbit\Models\Updates.cs" />
-    <Compile Include="Fitbit\Models\User.cs" />
-    <Compile Include="Fitbit\Models\UserProfile.cs" />
-    <Compile Include="Fitbit\SubscriptionManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Libraries\Fitbit.dll" />
+    <Content Include="Libraries\RestSharp.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
